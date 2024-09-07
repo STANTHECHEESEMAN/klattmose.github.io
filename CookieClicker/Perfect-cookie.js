@@ -1,3 +1,17 @@
+"use strict";
+/**
+ * Hello, to add your custom cookie as an option in this, you have to do
+ * `new PCSelector.PCType(name,, assets, maybeIcon, maybeRequirement)`
+ * So, instead of `Game.Loader.Replace(bleh)`, maybe do:
+ * ```js
+ * if (window.PCSelector) {
+ * 	new PCSelector.PCType("My awesome cookie", { cookie: "link to your cookie" })
+ * } else {
+ * 	Game.Loader.Replace("perfectCookie.png", "link to your cookie")
+ * }
+ * ```
+ * (Check out ./sourceCode.ts for readable code!)
+ */
 var PCSelector;
 (function (PCSelector) {
     /**
