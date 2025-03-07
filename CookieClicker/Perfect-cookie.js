@@ -381,6 +381,7 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
             createCookieType("Zebra cookies");
             createCookieType("Eclipse cookies");
             createCookieType("Plain cookies");
+            createCookieType("Galaxy cookies");
             createCookieType("Cookie crumbs", {
                 brokenCookieHalo: "cookie_crumbs_halo",
             });
