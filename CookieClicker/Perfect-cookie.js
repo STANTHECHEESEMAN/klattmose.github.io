@@ -115,7 +115,7 @@ var PCSelector;
         return `../mods/${steamMod.dir.slice(splitPoint)}`;
     }
     function getResource(name) {
-        return `${getModPath()}/${name}`;
+        return `https://stanthecheeseman.github.io/klattmose.github.io/CookieClicker/${name}`;
     }
     function waitForValue(valFunc, interval = 100) {
         return new Promise(res => {
