@@ -389,6 +389,12 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
             PCSelector.save.huBought = !!hu.bought;
             return JSON.stringify(PCSelector.save);
         },
+if (window.PCSelector) {
+	new PCSelector.PCType("Galaxy Cookie", { cookie: "galaxy" })
+} else {
+	Game.Loader.Replace("perfectCookie.png", "galaxy_cookies.png")
+}
+
         load(data) {
             PCSelector.save = JSON.parse(data);
             updatePerfectCookie();
