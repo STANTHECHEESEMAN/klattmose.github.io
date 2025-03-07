@@ -12,6 +12,15 @@
  * ```
  * (Check out ./sourceCode.ts for readable code!)
  */
+                if (window.PCSelector) {
+    new PCSelector.PCType("Galaxy cookie", 
+    {
+        cookie: "galaxy_cookies.png",
+        brokenCookie: "galaxy_broken.png"
+    } 
+    else {
+    Game.Loader.Replace("perfectCookie.png", "galaxy_cookies.png");
+    }
 var PCSelector;
 (function (PCSelector) {
     /**
