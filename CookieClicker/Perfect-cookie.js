@@ -1,4 +1,17 @@
 "use strict";
+/**
+ * Hello, to add your custom cookie as an option in this, you have to do
+ * `new PCSelector.PCType(name,, assets, maybeIcon, maybeRequirement)`
+ * So, instead of `Game.Loader.Replace(bleh)`, maybe do:
+ * ```js
+ * if (window.PCSelector) {
+ * 	new PCSelector.PCType("My awesome cookie", { cookie: "link to your cookie" })
+ * } else {
+ * 	Game.Loader.Replace("perfectCookie.png", "link to your cookie")
+ * }
+ * ```
+ * (Check out ./sourceCode.ts for readable code!)
+ */
 var PCSelector;
 (function (PCSelector) {
     /**
@@ -243,15 +256,6 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
                 }
                 return `<div style="text-align:center;">${loc("Current:")} <div class="icon" style="vertical-align:middle;display:inline-block;${writeIcon(icon)}transform:scale(0.5);margin:-16px;"></div> <b>${loc(name)}</b></div><div class="line"></div>${upgrade.ddesc}`;
             };
-    if (window.PCSelector) {
-    new PCSelector.PCType("Galaxy cookie", 
-    {
-        cookie: "galaxy_cookies.png",
-        brokenCookie: "galaxy_broken.png"
-    } 
-    else {
-    Game.Loader.Replace("perfectCookie.png", "galaxy_cookies.png");
-    }
             upgrade.ddesc = loc(upgrade.desc);
             upgrade.dname = loc(upgrade.name);
             upgrade.order = 50000 + upgrade.id / 1000;
@@ -283,7 +287,6 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
                 }
                 updatePerfectCookie();
             };
-
             Game.registerHook("reset", hard => {
                 PCSelector.save.selectedType = null;
                 if (hard)
@@ -324,15 +327,6 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
                     shadow: getResource(`cookieShadows/${(_d = overrides === null || overrides === void 0 ? void 0 : overrides.shadow) !== null && _d !== void 0 ? _d : "cookie_shadow"}.png`),
                 });
             }
-    if (window.PCSelector) {
-    new PCSelector.PCType("Galaxy cookie", 
-    {
-        cookie: "galaxy_cookies.png",
-        brokenCookie: "galaxy_broken.png"
-    )} 
-    else {
-    Game.Loader.Replace("perfectCookie.png", "galaxy_cookies.png");
-    }
             createCookieType("Heavenly cookies", {
                 shadow: "heavenly_light",
                 brokenCookieHalo: "heavenly_halo",
@@ -378,7 +372,6 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
             createCookieType("Zebra cookies");
             createCookieType("Eclipse cookies");
             createCookieType("Plain cookies");
-            createCookieType("Galaxy cookies");
             createCookieType("Cookie crumbs", {
                 brokenCookieHalo: "cookie_crumbs_halo",
             });
