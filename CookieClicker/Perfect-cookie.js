@@ -371,7 +371,6 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
             });
             createCookieType("Zebra cookies");
             createCookieType("Eclipse cookies");
-            createCookieType("Galaxy cookies");
             createCookieType("Plain cookies");
             createCookieType("Cookie crumbs", {
                 brokenCookieHalo: "cookie_crumbs_halo",
@@ -382,6 +381,10 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
             });
             createCookieType("Peanut butter cookies", {
                 brokenCookieHalo: "bumpy_cookie_halo",
+            });
+            createCookieType("Galaxy cookies", {
+            shadow: "galaxy_broken",
+            brokenCookieHalo: "galaxy_cookies",
             });
             PCSelector.ready = true;
             (_a = this.load) === null || _a === void 0 ? void 0 : _a.call(this, ((_b = this.save) === null || _b === void 0 ? void 0 : _b.call(this)) || "");
@@ -401,4 +404,3 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
         },
     });
 })(PCSelector || (PCSelector = {}));
-
