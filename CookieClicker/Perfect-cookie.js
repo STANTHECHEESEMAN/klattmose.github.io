@@ -68,15 +68,6 @@ var PCSelector;
         }
         return source;
     }
-    if (window.PCSelector) {
-    new PCSelector.PCType("Galaxy Cookie", 
-    {
-        cookie: "galaxy_cookies.png",
-        brokenCookie: "galaxy_broken.png"
-    } 
-    else {
-    Game.Loader.Replace("perfectCookie.png", "galaxy_cookies.png");
-    }
     /**
      * A helper function which replaces(or appends) code in a function, returning the new function, and it's eval free!
      * @param func The source function
@@ -409,3 +400,12 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
         },
     });
 })(PCSelector || (PCSelector = {}));
+    if (window.PCSelector) {
+    new PCSelector.PCType("Galaxy Cookie", 
+    {
+        cookie: "galaxy_cookies.png",
+        brokenCookie: "galaxy_broken.png"
+    } 
+    else {
+    Game.Loader.Replace("perfectCookie.png", "galaxy_cookies.png");
+    }
