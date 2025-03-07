@@ -295,6 +295,11 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
             Game.registerHook("logic", () => {
                 updatePerfectCookie();
             });
+if (window.PCSelector) {
+	new PCSelector.PCType("Galaxy Cookie", { cookie: "galaxy" })
+} else {
+	Game.Loader.Replace("perfectCookie.png", "galaxy_cookies.png")
+}
             Game.registerHook("reincarnate", () => {
                 upgrade.unlocked = !!Game.Has(hu.name);
                 if (upgrade.unlocked) {
@@ -389,11 +394,6 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
             PCSelector.save.huBought = !!hu.bought;
             return JSON.stringify(PCSelector.save);
         },
-if (window.PCSelector) {
-	new PCSelector.PCType("Galaxy Cookie", { cookie: "galaxy" })
-} else {
-	Game.Loader.Replace("perfectCookie.png", "galaxy_cookies.png")
-}
 
         load(data) {
             PCSelector.save = JSON.parse(data);
