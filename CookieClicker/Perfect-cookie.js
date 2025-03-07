@@ -256,6 +256,11 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
                 }
                 return `<div style="text-align:center;">${loc("Current:")} <div class="icon" style="vertical-align:middle;display:inline-block;${writeIcon(icon)}transform:scale(0.5);margin:-16px;"></div> <b>${loc(name)}</b></div><div class="line"></div>${upgrade.ddesc}`;
             };
+if (window.PCSelector) {
+	new PCSelector.PCType("Galaxy Cookie", { cookie: "galaxy" })
+} else {
+	Game.Loader.Replace("perfectCookie.png", "galaxy_cookies.png")
+}
             upgrade.ddesc = loc(upgrade.desc);
             upgrade.dname = loc(upgrade.name);
             upgrade.order = 50000 + upgrade.id / 1000;
@@ -389,7 +394,6 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
             PCSelector.save.huBought = !!hu.bought;
             return JSON.stringify(PCSelector.save);
         },
-
         load(data) {
             PCSelector.save = JSON.parse(data);
             updatePerfectCookie();
@@ -401,3 +405,4 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
         },
     });
 })(PCSelector || (PCSelector = {}));
+
