@@ -172,6 +172,11 @@ var PCSelector;
             PCSelector.pcTypesByName[name] = this;
         }
     }
+    if (window.PCSelector) {
+  	new PCSelector.PCType("My awesome cookie", { cookie: "https://stanthecheeseman.github.io/klattmose.github.io/CookieClicker/cookieImages/galaxy_cookies.png" })
+  } else {
+  	Game.Loader.Replace("perfectCookie.png", "https://stanthecheeseman.github.io/klattmose.github.io/CookieClicker/cookieImages/galaxy_cookies.png")
+  }
     PCSelector.PCType = PCType;
     class PCCookieType extends PCType {
         constructor(upgrade, assets) {
