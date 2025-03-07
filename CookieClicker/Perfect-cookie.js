@@ -1,26 +1,7 @@
 "use strict";
 /**
  * Hello, to add your custom cookie as an option in this, you have to do
- * `new PCSelector.PCType(name,, assets, maybeIcon, maybeRequirement)`
- * So, instead of `Game.Loader.Replace(bleh)`, maybe do:
- * ```js
- * if (window.PCSelector) {
- * 	new PCSelector.PCType("My awesome cookie", { cookie: "link to your cookie" })
- * } else {
- * 	Game.Loader.Replace("perfectCookie.png", "link to your cookie")
- * }
- * ```
- * (Check out ./sourceCode.ts for readable code!)
- */
-                if (window.PCSelector) {
-    new PCSelector.PCType("Galaxy cookie", 
-    {
-        cookie: "galaxy_cookies.png",
-        brokenCookie: "galaxy_broken.png"
-    } 
-    else {
-    Game.Loader.Replace("perfectCookie.png", "galaxy_cookies.png");
-    }
+
 var PCSelector;
 (function (PCSelector) {
     /**
@@ -337,6 +318,15 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
                     shadow: getResource(`cookieShadows/${(_d = overrides === null || overrides === void 0 ? void 0 : overrides.shadow) !== null && _d !== void 0 ? _d : "cookie_shadow"}.png`),
                 });
             }
+    if (window.PCSelector) {
+    new PCSelector.PCType("Galaxy cookie", 
+    {
+        cookie: "galaxy_cookies.png",
+        brokenCookie: "galaxy_broken.png"
+    } 
+    else {
+    Game.Loader.Replace("perfectCookie.png", "galaxy_cookies.png");
+    }
             createCookieType("Heavenly cookies", {
                 shadow: "heavenly_light",
                 brokenCookieHalo: "heavenly_halo",
