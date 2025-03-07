@@ -1,7 +1,4 @@
 "use strict";
-/**
- * Hello, to add your custom cookie as an option in this, you have to do
-
 var PCSelector;
 (function (PCSelector) {
     /**
@@ -246,7 +243,15 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
                 }
                 return `<div style="text-align:center;">${loc("Current:")} <div class="icon" style="vertical-align:middle;display:inline-block;${writeIcon(icon)}transform:scale(0.5);margin:-16px;"></div> <b>${loc(name)}</b></div><div class="line"></div>${upgrade.ddesc}`;
             };
-
+    if (window.PCSelector) {
+    new PCSelector.PCType("Galaxy cookie", 
+    {
+        cookie: "galaxy_cookies.png",
+        brokenCookie: "galaxy_broken.png"
+    } 
+    else {
+    Game.Loader.Replace("perfectCookie.png", "galaxy_cookies.png");
+    }
             upgrade.ddesc = loc(upgrade.desc);
             upgrade.dname = loc(upgrade.name);
             upgrade.order = 50000 + upgrade.id / 1000;
