@@ -312,7 +312,6 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
                 }
                 updatePerfectCookie();
             });
-            new PCSelector.PCType(Galaxy, galaxy, maybeIcon, maybeRequirement)
             Game.Loader.Load(["perfectCookie.png", "cookieShadow.png"]);
             await waitForValue(() => Game.Loader.assets["perfectCookie.png"] &&
                 Game.Loader.assets["cookieShadow.png"]);
@@ -372,6 +371,7 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
             });
             createCookieType("Zebra cookies");
             createCookieType("Eclipse cookies");
+            createCookieType("Galaxy cookies");
             createCookieType("Plain cookies");
             createCookieType("Cookie crumbs", {
                 brokenCookieHalo: "cookie_crumbs_halo",
