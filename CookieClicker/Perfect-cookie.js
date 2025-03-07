@@ -382,17 +382,6 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
             createCookieType("Peanut butter cookies", {
                 brokenCookieHalo: "bumpy_cookie_halo",
             });
-function createGalaxyCookie() {
-    const cookieName = "galaxy_cookies";
-    new PCCookieType(Game.Upgrades["Galaxy cookies"], {
-        cookie: getResource(`cookieImages/${cookieName}.png`),
-        brokenCookie: getResource(`cookieBroken/galaxy_broken.png`),
-        brokenCookieHalo: getResource(`cookieHalos/galaxy_halo.png`),
-        shadow: getResource(`cookieShadows/galaxy_shadow.png`),
-    });
-}
-
-createGalaxyCookie();
             PCSelector.ready = true;
             (_a = this.load) === null || _a === void 0 ? void 0 : _a.call(this, ((_b = this.save) === null || _b === void 0 ? void 0 : _b.call(this)) || "");
         },
