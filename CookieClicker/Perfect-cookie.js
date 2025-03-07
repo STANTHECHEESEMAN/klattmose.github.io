@@ -287,15 +287,7 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
                 }
                 updatePerfectCookie();
             };
-                if (window.PCSelector) {
-    new PCSelector.PCType("Galaxy Cookie", 
-    {
-        cookie: "galaxy_cookies.png",
-        brokenCookie: "galaxy_broken.png"
-    } 
-    else {
-    Game.Loader.Replace("perfectCookie.png", "galaxy_cookies.png");
-    }
+
             Game.registerHook("reset", hard => {
                 PCSelector.save.selectedType = null;
                 if (hard)
