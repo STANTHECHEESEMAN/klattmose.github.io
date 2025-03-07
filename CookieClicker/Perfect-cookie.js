@@ -256,11 +256,6 @@ Comes with a variety of basic flavors. <q>Show and admire your all cookies like 
                 }
                 return `<div style="text-align:center;">${loc("Current:")} <div class="icon" style="vertical-align:middle;display:inline-block;${writeIcon(icon)}transform:scale(0.5);margin:-16px;"></div> <b>${loc(name)}</b></div><div class="line"></div>${upgrade.ddesc}`;
             };
-if (window.PCSelector) {
-	new PCSelector.PCType("Galaxy Cookie", { cookie: "galaxy" })
-} else {
-	Game.Loader.Replace("perfectCookie.png", "galaxy_cookies.png")
-}
             upgrade.ddesc = loc(upgrade.desc);
             upgrade.dname = loc(upgrade.name);
             upgrade.order = 50000 + upgrade.id / 1000;
@@ -317,6 +312,7 @@ if (window.PCSelector) {
                 }
                 updatePerfectCookie();
             });
+            new PCSelector.PCType(Galaxy, galaxy, maybeIcon, maybeRequirement)
             Game.Loader.Load(["perfectCookie.png", "cookieShadow.png"]);
             await waitForValue(() => Game.Loader.assets["perfectCookie.png"] &&
                 Game.Loader.assets["cookieShadow.png"]);
